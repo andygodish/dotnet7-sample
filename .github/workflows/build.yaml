@@ -11,14 +11,14 @@ jobs:
     - name: Scale deployment
       run: | 
         kubectl scale deployment dotnet7-runner --replicas 3
-	kubectl scale deployment buildah-runner --replicas 3
+        kubectl scale deployment buildah-runner --replicas 3
 
   scale-down: 
-    needs: [push]
+    needs: [scale-up]
     runs-on: [self-hosted, base, dev]
     steps:
     - name: Scale deployment
       run: | 
         kubectl scale deployment dotnet7-runner --replicas 0
-	kubectl scale deployment buildah-runner --replicas 0
+        kubectl scale deployment buildah-runner --replicas 0
   
