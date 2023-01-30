@@ -1,0 +1,15 @@
+/work/sample1/bin/Debug/net7.0/sample1
+/work/sample1/bin/Debug/net7.0/sample1.deps.json
+/work/sample1/bin/Debug/net7.0/sample1.runtimeconfig.json
+/work/sample1/bin/Debug/net7.0/sample1.dll
+/work/sample1/bin/Debug/net7.0/sample1.pdb
+/work/sample1/obj/Debug/net7.0/sample1.csproj.AssemblyReference.cache
+/work/sample1/obj/Debug/net7.0/sample1.GeneratedMSBuildEditorConfig.editorconfig
+/work/sample1/obj/Debug/net7.0/sample1.AssemblyInfoInputs.cache
+/work/sample1/obj/Debug/net7.0/sample1.AssemblyInfo.cs
+/work/sample1/obj/Debug/net7.0/sample1.csproj.CoreCompileInputs.cache
+/work/sample1/obj/Debug/net7.0/sample1.dll
+/work/sample1/obj/Debug/net7.0/refint/sample1.dll
+/work/sample1/obj/Debug/net7.0/sample1.pdb
+/work/sample1/obj/Debug/net7.0/sample1.genruntimeconfig.cache
+/work/sample1/obj/Debug/net7.0/ref/sample1.dll
