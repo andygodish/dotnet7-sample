@@ -27,7 +27,7 @@ jobs:
     - name: Build image using buildah
       run: | 
         cd /home/runner/_work/dotnet7-sample/dotnet7-sample/App/
-        buildah bud -f . --format docker --tls-verify=false -t quay.io/andygodish/dotnet7-sample:${{ env.date }}
+        buildah bud -f . --format docker --tls-verify=false -t quay.io/andygodish/dotnet7sample:${{ env.date }}
 
 
   push:
@@ -37,7 +37,7 @@ jobs:
     - name: Push image
       run: | 
         buildah login -u="andygodish+dotnet7sample" -p=${{ secrets.QUAY_PASSWORD }} quay.io
-        buildah push quay.io/andygodish/dotnet7-sample:${{ needs.build.outputs.version }}
+        buildah push quay.io/andygodish/dotnet7sample:${{ needs.build.outputs.version }}
 
   scale-down: 
     needs: [push]
