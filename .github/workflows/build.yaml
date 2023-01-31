@@ -16,7 +16,7 @@ jobs:
   build:
     needs: [scale-up]
     runs-on: [self-hosted, dotnet7, dev]
-		outputs: 
+    outputs: 
       version: ${{env.date}}
     steps:
     - name: Set The Image Tag
