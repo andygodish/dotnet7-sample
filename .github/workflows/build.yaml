@@ -15,7 +15,7 @@ jobs:
   
   build:
     needs: [scale-up]
-    runs-on: [self-hosted, dotnet7, dev]
+    runs-on: [self-hosted, buildah, dev]
     outputs: 
       version: ${{env.date}}
     steps:
