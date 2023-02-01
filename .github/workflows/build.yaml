@@ -34,7 +34,7 @@ jobs:
         buildah push quay.io/andygodish/dotnet7-sample:${{ needs.build.outputs.version }}
 
   scale-down: 
-    needs: [push]
+    needs: [build]
     runs-on: [self-hosted, base, dev]
     steps:
     - name: Scale deployment
