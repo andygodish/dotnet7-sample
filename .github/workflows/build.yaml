@@ -1,9 +1,9 @@
-name: build container image
+name: build & push container image
 on:
-  workflow_dispatch
-#   push:
-#     branches: 
-#     - main
+  # workflow_dispatch
+  push:
+    branches: 
+    - main
 jobs: 
   scale-up: 
     runs-on: [self-hosted, base, dev]
@@ -28,12 +28,6 @@ jobs:
       run: | 
         cd /home/runner/_work/dotnet7-sample/dotnet7-sample/App/
         buildah bud -f . --format docker --tls-verify=false -t quay.io/andygodish/dotnet7-sample:${{ env.date }}
-
-
-  push:
-    needs: [build]
-    runs-on: [self-hosted, buildah, dev]
-    steps: 
     - name: Push image
       run: | 
         buildah login -u="andygodish+dotnet7sample" -p=${{ secrets.QUAY_PASSWORD }} quay.io
