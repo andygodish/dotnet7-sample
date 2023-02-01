@@ -31,7 +31,7 @@ jobs:
     - name: Push image
       run: | 
         buildah login -u="andygodish+dotnet7sample" -p=${{ secrets.QUAY_PASSWORD }} quay.io
-        buildah push quay.io/andygodish/dotnet7-sample:${{ needs.build.outputs.version }}
+        buildah push quay.io/andygodish/dotnet7-sample:${{ env.version }}
 
   scale-down: 
     needs: [build]
